@@ -21,12 +21,14 @@
         </div>
         <div class="cards">
             {% for card in pokemons %}
+            <a href="/pokemon/{{card.name.english}}">
                 <div class="card">
                     <h2>{{card.name.english}}</h2>
                     <img src="{{card.thumbnail}}" alt="{{card.name.english}}">
                     <h5>{% for type in card.type %}{{type}} {% endfor %}Type</h5>
                     <p>{{card.description}}</p>
                 </div>
+            </a>
             {% endfor %}
         </div>
     </div>
