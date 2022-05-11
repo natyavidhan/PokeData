@@ -1,0 +1,27 @@
+.card{
+    background-color: #fefefe;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+.card img{
+    width: 120px;
+    height: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}

@@ -1,0 +1,57 @@
+{
+    "base": {
+        "Attack": 55,
+        "Defense": 40,
+        "HP": 35,
+        "Sp. Attack": 50,
+        "Sp. Defense": 50,
+        "Speed": 90
+    },
+    "description": "While sleeping, it generates electricity in the sacs in its cheeks. If it\u2019s not getting enough sleep, it will be able to use only weak electricity.",
+    "evolution": {
+        "next": [
+            [
+                "26",
+                "use Thunder Stone"
+            ]
+        ],
+        "prev": [
+            "172",
+            "high Friendship"
+        ]
+    },
+    "hires": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/025.png",
+    "id": 25,
+    "image": {},
+    "name": {
+        "chinese": "\u76ae\u5361\u4e18",
+        "english": "Pikachu",
+        "french": "Pikachu",
+        "japanese": "\u30d4\u30ab\u30c1\u30e5\u30a6"
+    },
+    "profile": {
+        "ability": [
+            [
+                "Static",
+                "false"
+            ],
+            [
+                "Lightning Rod",
+                "true"
+            ]
+        ],
+        "egg": [
+            "Field",
+            "Fairy"
+        ],
+        "gender": "50:50",
+        "height": "0.4 m",
+        "weight": "6 kg"
+    },
+    "species": "Mouse Pok\u00e9mon",
+    "sprite": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/sprites/025.png",
+    "thumbnail": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/thumbnails/025.png",
+    "type": [
+        "Electric"
+    ]
+}

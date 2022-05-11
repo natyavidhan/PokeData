@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/static/global.css">
+    <link rel="stylesheet" href="/static/pokemon.css">
     <title>PokeData</title>
 </head>
 <body>
@@ -14,6 +15,16 @@
         <div class="text-center">
             <h1>PokeData</h1>
             <h4>A WebApp to Showcase Pokemon Stats</h4>
+        </div>
+        <div class="cards">
+            {% for card in pokemons %}
+                <div class="card">
+                    <h2>{{card.name.english}}</h2>
+                    <img src="{{card.thumbnail}}" alt="{{card.name.english}}">
+                    <h5>{% for type in card.type %}{{type}}/{% endfor %} Type</h5>
+                    <p>{{card.description}}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </body>
