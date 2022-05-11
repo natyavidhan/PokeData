@@ -24,6 +24,13 @@ def pokemon(name):
     if pokemon != {"error": "Pokemon not found"}:
         return render_template('pokemon.html', pokemon=pokemon)
 
+@app.route('/all')
+def all():
+    page = request.args.get('page', 1, type=int)
+    limit = request.args.get('limit', 20, type=int)
+    pokemon = requests.get(f"https://studiousapi.up.railway.app/pokedata/data/all?page={page}&limit={limit}").json()
+    return render_template('all.html', pokemons=pokemon, page=page, limit=limit)
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host="0.0.0.0", port=5000)

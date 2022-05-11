@@ -13,11 +13,11 @@
 <body>
     <div class="container mt-5">
         <div class="text-center">
-            <h1>PokeData</h1>
-            <h4>A WebApp to Showcase Pokemon Stats</h4>
+            <h1>All Pokemons</h1>
             <div class="btn-group mt-4 mb-4" role="group">
-                <a href="/search"><button type="button" class="btn btn-outline-dark">Search</button></a>
-                <a href="/all"><button type="button" class="btn btn-outline-dark">All Pokemons</button></a>
+                <a href="/all?page={{page-1}}"><button type="button" class="btn btn-outline-dark">Previous Page</button></a>
+                <a href="/"><button type="button" class="btn btn-outline-dark">Home</button></a>
+                <a href="/all?page={{page+1}}"><button type="button" class="btn btn-outline-dark">Next Page</button></a>
             </div>
         </div>
         <div class="cards">
@@ -31,6 +31,13 @@
                 </div>
             </a>
             {% endfor %}
+        </div>
+        <div class="text-center">
+            <div class="btn-group mt-4 mb-4" role="group">
+                <a href="/all?page={{page-1}}"><button type="button" class="btn btn-outline-dark">Previous Page</button></a>
+                <a href="/"><button type="button" class="btn btn-outline-dark">Home</button></a>
+                <a href="/all?page={{page+1}}"><button type="button" class="btn btn-outline-dark">Next Page</button></a>
+            </div>
         </div>
     </div>
 </body>
