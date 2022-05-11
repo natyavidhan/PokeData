@@ -6,6 +6,7 @@
     margin: 20px;
     display: inline-block;
     transition: 0.3s ease-in-out;
+    text-align: center;
 }
 
 .card:hover {

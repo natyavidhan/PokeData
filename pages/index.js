@@ -26,7 +26,7 @@ export class Home extends React.Component {
               </center>
               <div className={styles.cards}>
                 {this.props.pokemons.map(pokemon => (
-                  <PokemonCard key={pokemon.name.english} name={pokemon.name.english} image={pokemon.thumbnail} types={pokemon.type} stats={pokemon.base} />
+                  <PokemonCard key={pokemon.name.english} name={pokemon.name.english} image={pokemon.thumbnail} types={pokemon.type} stats={pokemon.base} description={pokemon.description}/>
                 ))}
               </div>
             </main>

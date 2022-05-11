@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from '../styles/pokemon.module.css'
 
 function PokemonCard(props) {
-  let { name, image, types, stats } = props
+  let { name, image, types, stats, description } = props
   if (!stats){
     stats = {
       hp: 0,
@@ -16,7 +16,8 @@ function PokemonCard(props) {
     <div className={styles.card}>
       <h1>{name}</h1>
       <img src={image} alt={name} />
-      <h2>{types} Type</h2>
+      <h4>{types} Type</h4>
+      <p>{description}</p>
       <div className={styles.stats}>
         HP: {stats.HP}
         <br />
