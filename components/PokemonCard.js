@@ -4,19 +4,27 @@ import styles from '../styles/pokemon.module.css'
 
 function PokemonCard(props) {
   let { name, image, types, stats } = props
+  if (!stats){
+    stats = {
+      hp: 0,
+      attack: 0,
+      defense: 0,
+      speed: 0,
+    }
+  }
   return (
     <div className={styles.card}>
       <h1>{name}</h1>
       <img src={image} alt={name} />
       <h2>{types} Type</h2>
       <div className={styles.stats}>
-        HP: {stats.hp}
+        HP: {stats.HP}
         <br />
-        Attack: {stats.attack}
+        Attack: {stats.Attack}
         <br />
-        Defense: {stats.defense}
+        Defense: {stats.Defense}
         <br />
-        Speed: {stats.speed}
+        Speed: {stats.Speed}
       </div>
     </div>
   )
