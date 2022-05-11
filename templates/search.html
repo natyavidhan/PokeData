@@ -13,13 +13,19 @@
 <body>
     <div class="container mt-5">
         <div class="text-center">
-            <h1>PokeData</h1>
-            <h4>A WebApp to Showcase Pokemon Stats</h4>
-            <div class="btn-group mt-4 mb-4" role="group">
-                <a href="/search"><button type="button" class="btn btn-outline-dark">Search</button></a>
+            {% if pokemons %}
+            <h1>Search Result For {{query}}</h1>
+            {% else %}
+            <h1>Search</h1>
+            {% endif %}
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="input" value="{{query}}">
+                <br>
+                <button class="btn btn-outline-secondary" type="button" onclick="search()">Search</button>
             </div>
         </div>
         <div class="cards">
+            {% if pokemons %}
             {% for card in pokemons %}
                 <div class="card">
                     <h2>{{card.name.english}}</h2>
@@ -28,7 +34,14 @@
                     <p>{{card.description}}</p>
                 </div>
             {% endfor %}
+            {% endif %}
         </div>
     </div>
+    <script>
+        function search() {
+            var input = document.getElementById("input").value;
+            window.location.href = "/search/" + input;
+        }
+    </script>
 </body>
 </html>
