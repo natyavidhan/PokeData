@@ -3,3 +3,13 @@
   font-size: 4em;
   margin: 0.67em 0;
 }
+
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  
+}
