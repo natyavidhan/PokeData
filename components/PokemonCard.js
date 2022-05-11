@@ -3,19 +3,20 @@ import PropTypes from 'prop-types'
 import styles from '../styles/pokemon.module.css'
 
 function PokemonCard(props) {
+  let { name, image, types, stats } = props
   return (
     <div className={styles.card}>
-      <h1>{props.name}</h1>
-      <img src={props.image} alt={props.name} />
-      <h2>{props.type} Type</h2>
+      <h1>{name}</h1>
+      <img src={image} alt={name} />
+      <h2>{types} Type</h2>
       <div className={styles.stats}>
-        HP: {props.stats.hp}
+        HP: {stats.hp}
         <br />
-        Attack: {props.stats.attack}
+        Attack: {stats.attack}
         <br />
-        Defense: {props.stats.defense}
+        Defense: {stats.defense}
         <br />
-        Speed: {props.stats.speed}
+        Speed: {stats.speed}
       </div>
     </div>
   )
