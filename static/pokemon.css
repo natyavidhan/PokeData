@@ -25,3 +25,24 @@
     justify-items: center;
     align-items: center;
 }
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: stretch;
+    align-items: center;
+}
+
+.stats{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    display: inline;
+}
+
+.description-text{
+    grid-column: 1 / 3;
+}
