@@ -6,7 +6,7 @@ app.jinja_env.globals.update(type=type)
 
 @app.route('/')
 def index():
-    pokemons = requests.get("https://studiousapi.up.railway.app/pokedata/data/random?limit=20").json()
+    pokemons = requests.get("https://studiousapi.vercel.app/pokedata/data/random?limit=20").json()
     return render_template('index.html', pokemons=pokemons)
 
 @app.route('/search')
@@ -15,12 +15,12 @@ def search_():
 
 @app.route('/search/<query>')
 def search(query):
-    result = requests.get(f"https://studiousapi.up.railway.app/pokedata/data/search?query={query}").json()
+    result = requests.get(f"https://studiousapi.vercel.app/pokedata/data/search?query={query}").json()
     return render_template('search.html', pokemons=result, query=query)
 
 @app.route('/pokemon/<name>')
 def pokemon(name):
-    pokemon = requests.get(f"https://studiousapi.up.railway.app/pokedata/data/{name}").json()
+    pokemon = requests.get(f"https://studiousapi.vercel.app/pokedata/data/{name}").json()
     if pokemon != {"error": "Pokemon not found"}:
         return render_template('pokemon.html', pokemon=pokemon)
 
@@ -28,7 +28,7 @@ def pokemon(name):
 def all():
     page = request.args.get('page', 1, type=int)
     limit = request.args.get('limit', 20, type=int)
-    pokemon = requests.get(f"https://studiousapi.up.railway.app/pokedata/data/all?page={page}&limit={limit}").json()
+    pokemon = requests.get(f"https://studiousapi.vercel.app/pokedata/data/all?page={page}&limit={limit}").json()
     return render_template('all.html', pokemons=pokemon, page=page, limit=limit)
 
 if __name__ == '__main__':
